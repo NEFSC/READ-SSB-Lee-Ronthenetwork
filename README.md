@@ -31,21 +31,56 @@ You will be greeted with a bland looking login screen.
 
 Using screen is important. It allows you to run a process in the background that will continue even if you  get disconnected. You might get disconnected if you are on VPN.
 
-1.  "screen -S run25_session"
+1.  "screen -S my_fancy_rcode_session"
   1. "screen" opens a session
   1. " -S " gives the session a name.
-  1. "run25_session" is the name of the session. Since you can have multiple screens, it helps to give a descriptive name. Perhaps the name of the script that you are going to run. 
+  1. "my_fancy_rcode_session" is the name of the session. Since you can have multiple screens, it helps to give a descriptive name. Perhaps the name of the script that you are going to run. 
   
 The PuTTY window might flash and you will end up at a screen that looks like this: 
 
 ![Login Screen](/images/screen1.jpg)
 
+# Part 5 Run your code
+Run your code with Rscript. 
 
+"Rscript my_fancy_rcode.R" ; mailme First.Last@noaa.gov "my_fancy_rcode complete"
+
+The first part runs the R script file called "my_fancy_rcode.R" that is stored in the directory that you are in.
+
+The mailme command will send you an email to "First.Last@noaa.gov" with the message "my_fancy_rcode complete" . This is particularly useful if your code takes a long time to run: you'll get a message that it's done. Not all of the servers have this functionality.
+
+# Part 6 Check and Detach
+
+Make sure your code has started to run:
+![It's working](/images/r_running.jpg)
+
+And then you can detatch with <Ctrl> <a> <d>.  You can open up another session, by doing steps 4-6 again.  But don't be a jerk an use up all the processing power.
+
+
+# Part 7 Code is done and Cleanup.
+If your code ran properly, you'll get an email that says "my_fancy_rcode complete".
+1. Open the session back up with
+screen -r "my_fancy_rcode"
+
+and take a look for any error messages.  If there are none, you can just type "exit" to terminate the screen.  Then you can log out of putty with another "exit"
 
 
 # Tips for Screen
 1. List all your screen screen -ls 
-1. Shut down a screen  "screen -XS [session # or name you want to quit] quit""
+1. Shut down a screen  "screen -XS my_fancy_rcode_session quit"
+1. Reconnect "screen -r my_fancy_rcode_session
+1. Create "screen -S my_fancy_rcode_session"
+
+
+# Other tips
+
+To see what else is running, use the unix command "top":
+
+![top](/images/top.jpg)
+
+Total CPU usage is in Green (0.2%, so not much is going on right now.)
+The user name,  CPU, and Memory usage is circled in Red. The CPU column is b
+
 
 # Stuff
 
