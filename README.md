@@ -75,12 +75,23 @@ and take a look for any error messages.  If there are none, you can just type "e
 # Other tips
 
 To see what else is running, use the unix command "top":
-
-![top](/images/top.jpg)
+![top](/images/top.png)
 
 Total CPU usage is in Green (0.2%, so not much is going on right now.)
 The user name,  CPU, and Memory usage is circled in Red. The CPU column is b
 
+If there are alot of other things running on the server, you can do this:
+```
+nice R < "your script here.R" --no-save
+```
+
+or 
+
+```
+nice Rscript my_fancy_rcode.R
+```
+
+There's a way to set the exact level of depriortiziation, but I've not gotten it right. Default is 0. Positive numbers make your script "more nice" (so lower priority). You can't set negative numbers as a regular user. 
 
 # Stuff
 
