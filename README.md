@@ -77,12 +77,19 @@ and take a look for any error messages.  If there are none, you can just type "e
 
 # Other tips
 
+## What Linux Servers
+
+[Learn about the NEFSC Linux servers](https://localonly.nefsc.noaa.gov/linux/Servers)
+
 ## What else is running?
 To see what else is running, use the unix command "top":
 ![top](/images/top.png)
 
 Total CPU usage is in Green (0.2%, so not much is going on right now.)
 The user name,  CPU, and Memory usage is circled in Red. The CPU column is based on a single computer instance, so don't be surprised if it shows something like 395%.
+
+
+
 
 
 ## How much memory is available?
