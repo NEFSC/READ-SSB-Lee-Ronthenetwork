@@ -33,9 +33,9 @@ You will be greeted with a bland looking login screen.
 Using screen is important. It allows you to run a process in the background that will continue even if you  get disconnected. You might get disconnected if you are on VPN.
 
 1.  "screen -S my_fancy_rcode_session"
-  1. "screen" opens a session
-  1. " -S " gives the session a name.
-  1. "my_fancy_rcode_session" is the name of the session. Since you can have multiple screens, it helps to give a descriptive name. Perhaps the name of the script that you are going to run. 
+    1. "screen" opens a session
+    1. " -S " gives the session a name.
+    1. "my_fancy_rcode_session" is the name of the session. Since you can have multiple screens, it helps to give a descriptive name. Perhaps the name of the script that you are going to run. 
   
 The PuTTY window might flash and you will end up at a screen that looks like this: 
 
@@ -55,7 +55,7 @@ The mailme command will send you an email to "First.Last@noaa.gov" with the mess
 Make sure your code has started to run:
 ![It's working](/images/r_running.jpg)
 
-And then you can detatch with <Ctrl> <a> <d>.  You can open up another session, by doing steps 4-6 again.  But don't be a jerk an use up all the processing power.
+And then you can detatch with Ctrl a d.  (Hold Ctrl then press a, then press d).  You can open up another session, by doing steps 4-6 again.  But don't be a jerk an use up all the processing power.
 
 
 # Part 7 Code is done and Cleanup.
