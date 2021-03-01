@@ -21,6 +21,7 @@ While you are installing things, you might want to get [WinSCP](https://winscp.n
 
 
 You will be greeted with a bland looking login screen.
+
 ![Login Screen](/images/login_screen.png)
 
 1. Use your network login (not your email)
