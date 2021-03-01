@@ -55,7 +55,7 @@ The mailme command will send you an email to "First.Last@noaa.gov" with the mess
 Make sure your code has started to run:
 ![It's working](/images/r_running.jpg)
 
-And then you can detatch with <Ctrl> <a> <d>.  You can open up another session, by doing steps 4-6 again.  But don't be a jerk an use up all the processing power.
+And then you can detatch with Ctrl a d.  (Hold Ctrl then press a, then press d).  You can open up another session, by doing steps 4-6 again.  But don't be a jerk an use up all the processing power.
 
 
 # Part 7 Code is done and Cleanup.
