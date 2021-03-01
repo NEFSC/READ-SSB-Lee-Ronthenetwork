@@ -9,6 +9,18 @@ You need to have a way to connect to the NEFSC servers. For windows users, PuTTY
 While you are installing things, you might want to get [WinSCP](https://winscp.net/eng/download.php). This lets you transfer files to a server easily. Of course, you can use the file manager built into windows or do it from the command line. 
 
 # Part 3 - Connect to the One of the Unix Servers and log in.
+1. Launch PuTTY
+1. Type in the host name of the server (blue).  
+    1.  We can't put these details on github, so contact DMS if you don't know them.
+    1.  If you're going to do this more than 1 or two times, save connection details (purple) 
+1. Click "Open" (green)
+
+![Putty Launch](/images/putty_pic.jpg)
+
+
+You will be greeted with a bland looking login screen.
+![Login Screen](/images/login_screen.png)
+
 
 # Part 4 - Use Screen
 
