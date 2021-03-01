@@ -25,7 +25,7 @@ You will be greeted with a bland looking login screen.
 
 1. Use your network login (not your email)
 1. When you type your password, no characters will show up.
-1. "cd"" into directory where you have an R script that you want to run (for me that is Git/IBMWG) 
+1. "cd" into directory where you have an R script that you want to run (for me that is Git/IBMWG) 
 
 # Part 4 - Use Screen
 
