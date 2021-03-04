@@ -1,12 +1,13 @@
 # Running R on one of the network servers using putty!
 
+Many of the NEFSC servers have Rstudio that is accessible by browser.  Sometimes, you will want to R directly directly. This will help you do that.
+
 This is adapted from Liz Brooks's powerpoint documentation, in which she has collected wisdom from David Hiltz
 
 Please help make this a valuable up-to-date resource.  To add your knowledge:
 1.   [Fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo) - It's in the top right of github.
 1.   Make your changes  - click the file you want to edit and then the little pencil on the right side.  ![Here's a picture](/images/fork_edit.jpg)
 1.   [Pull Request](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request-from-a-fork) so the changes get into the document.
-
 
 
 # Part 1 - Download and Install Putty
@@ -57,7 +58,9 @@ Run your code with Rscript.
 
 The first part runs the R script file called "my_fancy_rcode.R" that is stored in the directory that you are in.
 
-The mailme command will send you an email to "First.Last@noaa.gov" with the message "my_fancy_rcode complete" . This is particularly useful if your code takes a long time to run: you'll get a message that it's done. Not all of the servers have this functionality.
+The mailme command will send you an email to "First.Last@noaa.gov" with the message "my_fancy_rcode complete" . This is optional.  It is particularly useful if your code takes a long time to run: you'll get a message that it's done. Not all of the servers have this functionality.
+
+littler is another modern way to run R from the terminal. R CMD BATCH and R are older methods that you might see on the internet.  They are probably not as good.
 
 # Part 6 - Check and Detach
 
