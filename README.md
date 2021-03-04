@@ -2,6 +2,13 @@
 
 This is adapted from Liz Brooks's powerpoint documentation, in which she has collected wisdom from David Hiltz
 
+Please help make this a valuable up-to-date resource.  To add your knowledge:
+1.   [Fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo) - It's in the top right of github.
+1.   Make your changes  - click the file you want to edit and then the little pencil on the right side.  [Here's a picture](/figures/fork_edit.jpg)
+1.   [Pull Request](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests) so the changes get into the document.
+
+
+
 # Part 1 - Download and Install Putty
 You need to have a way to connect to the NEFSC servers. For windows users, PuTTY is a good choice.  [Here's your download link](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html).  Chances are you want the 64 bit windows installer. 
 
@@ -41,7 +48,7 @@ The PuTTY window might flash and you will end up at a screen that looks like thi
 
 ![Login Screen](/images/screen1.jpg)
 
-# Part 5 Run your code
+# Part 5 -  Run your code
 Run your code with Rscript. 
 
 ```
@@ -52,7 +59,7 @@ The first part runs the R script file called "my_fancy_rcode.R" that is stored i
 
 The mailme command will send you an email to "First.Last@noaa.gov" with the message "my_fancy_rcode complete" . This is particularly useful if your code takes a long time to run: you'll get a message that it's done. Not all of the servers have this functionality.
 
-# Part 6 Check and Detach
+# Part 6 - Check and Detach
 
 Make sure your code has started to run:
 ![It's working](/images/r_running.jpg)
@@ -60,7 +67,7 @@ Make sure your code has started to run:
 And then you can detatch with Ctrl a d.  (Hold Ctrl then press a, then press d).  You can open up another session, by doing steps 4-6 again.  But don't be a jerk an use up all the processing power.
 
 
-# Part 7 Code is done and Cleanup.
+# Part 7 - Results  and Cleanup.
 If your code ran properly, you'll get an email that says "my_fancy_rcode complete".
 1. Open the session back up with
 screen -r "my_fancy_rcode"
@@ -68,14 +75,14 @@ screen -r "my_fancy_rcode"
 and take a look for any error messages.  If there are none, you can just type "exit" to terminate the screen.  Then you can log out of putty with another "exit"
 
 
-# Tips for Screen
+# Part 8 - Tips for Screen
 1. List all your screen screen -ls 
 1. Shut down a screen  "screen -XS my_fancy_rcode_session quit"
 1. Reconnect "screen -r my_fancy_rcode_session
 1. Create "screen -S my_fancy_rcode_session"
 
 
-# Other tips
+# Part 9 - Other tips
 
 ## What Linux Servers
 
