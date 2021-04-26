@@ -128,7 +128,14 @@ nice Rscript my_fancy_rcode.R
 There's a way to set the exact level of depriortiziation, but I've not gotten it right. Default is 0. Positive numbers make your script "more nice" (so lower priority). You can't set negative numbers as a regular user. 
 
 
+## Moving files with SCP
 
+You might want to move files around on the network.  SCP from the command line might be nice, because you can automate it.  The syntax is
+
+```
+scp /full/path/of/files/to/move server:/full/path/of/destination
+```
+this might useful to put something onto the ftp server or put it into someone else's network folder.
 
 # Stuff
 
