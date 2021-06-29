@@ -89,7 +89,7 @@ and take a look for any error messages.  If there are none, you can just type "e
 
 ## What Linux Servers
 
-[Learn about the NEFSC Linux servers](https://localonly.nefsc.noaa.gov/linux/Servers)
+[Learn about the NEFSC Linux servers](https://www.st.nmfs.noaa.gov/confluence/display/NECIT/Linux+Servers+at+the+NEFSC) . Use your email prefix and password to log in.
 
 ## What else is running?
 To see what else is running, use the unix command "top":
