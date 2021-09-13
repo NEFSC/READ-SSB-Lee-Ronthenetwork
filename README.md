@@ -99,8 +99,10 @@ Total CPU usage is in Green (0.2%, so not much is going on right now.)
 The user name,  CPU, and Memory usage is circled in Red. The CPU column is based on a single computer instance, so don't be surprised if it shows something like 395%.
 
 
+## One of your processes is frozen?
 
-
+1.   Use "top" to lookup the process id 
+2.   Use "kill -9 <pid>" to kill the process number <pid"
 
 ## How much memory is available?
 
