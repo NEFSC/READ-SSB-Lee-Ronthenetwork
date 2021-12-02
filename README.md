@@ -1,6 +1,6 @@
 # Running R on one of the network servers using putty!
 
-Many of the [NEFSC servers](https://localonly.nefsc.noaa.gov/linux/Servers) have Rstudio that is accessible by browser. Sometimes, you will want to R directly directly. This will help you do that.
+Many of the [NEFSC servers](https://localonly.nefsc.noaa.gov/linux/Servers) have Rstudio that is accessible by browser. Sometimes, you will want to run R  directly. This will help you do that.
 
 This is adapted from Liz Brooks's powerpoint documentation, in which she has collected wisdom from David Hiltz
 
