@@ -139,6 +139,16 @@ scp /full/path/of/files/to/move server:/full/path/of/destination
 ```
 this might useful to put something onto the ftp server or put it into someone else's network folder.
 
+## Installing Packages 
+    
+All packages are to be centrally managed on the R|RSTUDIO|SHINY servers, please make note of this. An email was distributed to the entire R user group as well as the facility with this information.
+
+Please submit a ticket for the package you would like installed to R.  Format your requests for packages as follows:
+
+```
+install.packages(c('package name', 'package name'))
+``` 
+    
 # Stuff
 
 This repository is a scientific product and is not official communication of the National Oceanic and Atmospheric Administration, or the United States Department of Commerce. All NOAA GitHub project code is provided on an ‘as is’ basis and the user assumes responsibility for its use. Any claims against the Department of Commerce or Department of Commerce bureaus stemming from the use of this GitHub project will be governed by all applicable Federal law. Any reference to specific commercial products, processes, or services by service mark, trademark, manufacturer, or otherwise, does not constitute or imply their endorsement, recommendation or favoring by the Department of Commerce. The Department of Commerce seal and logo, or the seal and logo of a DOC bureau, shall not be used in any manner to imply endorsement of any commercial product or activity by DOC or the United States Government.
