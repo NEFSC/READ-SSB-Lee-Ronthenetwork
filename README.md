@@ -87,6 +87,21 @@ and take a look for any error messages.  If there are none, you can just type "e
 
 # Part 9 - Other tips
 
+## Installing pacakges
+
+All feature or package installations for R need to go through our ticketing system and must be approved via CCB. 
+
+This process helps us track packages and ensure security compliance in a unified area. When end users install packages they can be duplicating efforts and causing bloat on our infrastructure. We ask that you please submit your ticket using the following guidelines:
+
+1.   Please be sure to verify they are not already installed. (this has been occuring often)
+2.    Please also format your requests for packages as follows:
+```
+install.packages(c('package name', 'package name'))
+```
+
+
+
+
 ## What Linux Servers
 
 [Learn about the NEFSC Linux servers](https://www.st.nmfs.noaa.gov/confluence/display/NECIT/Linux+Servers+at+the+NEFSC) . Use your email prefix and password to log in.
@@ -139,15 +154,6 @@ scp /full/path/of/files/to/move server:/full/path/of/destination
 ```
 this might useful to put something onto the ftp server or put it into someone else's network folder.
 
-## Installing Packages 
-    
-All packages are to be centrally managed on the R|RSTUDIO|SHINY servers, please make note of this. An email was distributed to the entire R user group as well as the facility with this information.
-
-Please submit a ticket for the package you would like installed to R.  Format your requests for packages as follows:
-
-```
-install.packages(c('package name', 'package name'))
-``` 
     
 # Stuff
 
