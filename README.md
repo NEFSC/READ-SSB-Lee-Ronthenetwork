@@ -107,18 +107,22 @@ install.packages(c('package name', 'package name'))
 [Learn about the NEFSC Linux servers](https://www.st.nmfs.noaa.gov/confluence/display/NECIT/Linux+Servers+at+the+NEFSC) . Use your email prefix and password to log in.
 
 ## What else is running?
-To see what else is running, use the unix command "top":
+To see what else is running, use the unix command ``top``:
 ![top](/images/top.png)
 
 Total CPU usage is in Green (0.2%, so not much is going on right now.)
 The user name,  CPU, and Memory usage is circled in Red. The CPU column is based on a single computer instance, so don't be surprised if it shows something like 395%.
 
+Want to see just your own processes? Use ``top -u <yourid>``
 
-## One of your processes is frozen?
 
-1.   Use "top" to lookup the process id 
-2.   Use "kill -9 <pid>" to kill the process number <pid"
+## One of your processes is frozen? 
 
+1.   Use ``top -u <yourid>`` to lookup the process id. Replace ``<yourid>`` with your network id.  
+2.   Use ``kill -9 <pid>`` to kill the process number ``<pid>``
+
+This also might be useful if Rstudio hangs indefinitely on loading
+    
 ## How much memory is available?
 
 To see the amount of memory available use  "free -g"
