@@ -53,7 +53,7 @@ The PuTTY window might flash and you will end up at a screen that looks like thi
 Run your code with Rscript. 
 
 ```
-"Rscript my_fancy_rcode.R" ; mailme First.Last@noaa.gov "my_fancy_rcode complete"
+Rscript /path/to/my_fancy_rcode.R ; mailme First.Last@noaa.gov "my_fancy_rcode complete"
 ```
 
 The first part runs the R script file called "my_fancy_rcode.R" that is stored in the directory that you are in.
