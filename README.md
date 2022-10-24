@@ -158,6 +158,16 @@ scp /full/path/of/files/to/move server:/full/path/of/destination
 ```
 this might useful to put something onto the ftp server or put it into someone else's network folder.
 
+## Send yourself an email
+
+There are two ways to do this. One is in the section above on ``screen.``
+
+Another way to do this is to add the following line of code to your R code:
+
+```
+system("mailme First.Last@noaa.gov \"my_fancy_rcode.R complete\" ")
+```
+
     
 # Stuff
 
