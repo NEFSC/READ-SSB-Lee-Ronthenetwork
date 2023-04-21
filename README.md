@@ -21,7 +21,7 @@ While you are installing things, you might want to get [WinSCP](https://winscp.n
 1. Get onto the NEFSC network, either by VPN or by going to the office.
 1. Launch PuTTY
 1. Type in the host name of the server (blue).  
-    1.  We can't put these details on github, so contact  [DMS](mailto:NEFSC.IT-Helpdesk@noaa.gov?subject=NEFSC%20Server%20Details) if you don't know them.
+    1.  We can't put these details on github, so contact  [ITD](https://apps-st.fisheries.noaa.gov/jirasm/servicedesk/customer/portal/2) if you don't know them.
     1.  If you're going to do this more than 1 or two times, save connection details (purple) 
 1. Click "Open" (green)
 
