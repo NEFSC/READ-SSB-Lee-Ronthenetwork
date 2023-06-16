@@ -67,7 +67,7 @@ littler is another modern way to run R from the terminal. R CMD BATCH and R are 
 Make sure your code has started to run:
 ![It's working](/images/r_running.jpg)
 
-And then you can detatch with Ctrl a d.  (Hold Ctrl then press a, then press d).  You can open up another session, by doing steps 4-6 again.  But don't be a jerk an use up all the processing power.
+And then you can detatch with Ctrl a d.  (**Hold Ctrl then press a, then press d**).  You can open up another session, by doing steps 4-6 again.  But don't be a jerk an use up all the processing power.
 
 
 # Part 7 - Results  and Cleanup.
