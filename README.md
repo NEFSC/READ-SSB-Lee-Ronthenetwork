@@ -2,7 +2,7 @@
 
 NEFSC has moved to a container setup.  Open a ticket using the helpdesk and IT will setup a container. 
 1. Containers sometimes need to be restarted or updated. The files in the root directory will not persist, so save your results somewhere else
-2. Startup scripts can be handled. Put your ``.Rprofile'' into your root directory on ``NEFSCFILE.``  It will be copied into the root of your container every time the container is re-started or reconfigured.  
+2. Startup scripts can be handled. Put your [.Rprofile](https://github.com/NEFSC/READ-SSB-Lee-project-template/blob/main/R_code/project_logistics/.Rprofile_sample) into your root directory on ``NEFSCFILE.``  It will be copied into the root of your container every time the container is re-started or reconfigured.  Be mindful of the leading period in ``.Rprofile''.
 3. You will have access to an Rstudio development environment. If you so desire, you can execute scripts or unix commands from the ``Terminal`` tab. 
 
 
