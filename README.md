@@ -1,119 +1,12 @@
-# Running R on one of the network servers using putty!
+# Part 1 - Using R on the Network
 
-Many of the [NEFSC servers](https://localonly.nefsc.noaa.gov/linux/Servers) have Rstudio that is accessible by browser. Sometimes, you will want to run R  directly. This will help you do that.
-
-This is adapted from Liz Brooks's powerpoint documentation, in which she has collected wisdom from David Hiltz
-
-Please help make this a valuable up-to-date resource.  To add your knowledge:
-1.   [Fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo) - It's in the top right of github.
-1.   Make your changes  - click the file you want to edit and then the little pencil on the right side.  ![Here's a picture](/images/fork_edit.jpg)
-1.   [Pull Request](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request-from-a-fork) so the changes get into the document.
+NEFSC has moved to a container setup.  Open a ticket using the helpdesk and IT will setup a container. 
+1. Containers sometimes need to be restarted or updated. The files in the root directory will not persist, so save your results somewhere else
+2. Startup scripts can be handled. Put your ``.Rprofile'' into your root directory on ``NEFSCFILE.``  It will be copied into the root of your container every time the container is re-started or reconfigured.  
+3. You will have access to an Rstudio development environment. If you so desire, you can execute scripts or unix commands from the ``Terminal`` tab. 
 
 
-# Part 1 - Download and Install Putty
-You need to have a way to connect to the NEFSC servers. For windows users, PuTTY is a good choice.  [Here's your download link](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html).  Chances are you want the 64 bit windows installer. 
-
-# Part 2 - Optional WinSCP
-While you are installing things, you might want to get [WinSCP](https://winscp.net/eng/download.php). This lets you transfer files to a server easily. Of course, you can use the file manager built into windows or do it from the command line. 
-
-# Part 3 - Connect to the One of the Unix Servers, log in, and go to your working directory.
-
-1. Get onto the NEFSC network, either by VPN or by going to the office.
-1. Launch PuTTY
-1. Type in the host name of the server (blue).  
-    1.  We can't put these details on github, so contact  [ITD](https://apps-st.fisheries.noaa.gov/jirasm/servicedesk/customer/portal/2) if you don't know them.
-    1.  If you're going to do this more than 1 or two times, save connection details (purple) 
-1. Click "Open" (green)
-
-![Putty Launch](/images/putty_pic.jpg)
-
-
-You will be greeted with a bland looking login screen.
-
-![Login Screen](/images/login_screen.png)
-
-1. Use your network login (not your email)
-1. When you type your password, no characters will show up.
-1. "cd" into directory where you have an R script that you want to run (for me that is Git/IBMWG) 
-
-# Part 4 - Use Screen
-
-Using screen is important. It allows you to run a process in the background that will continue even if you  get disconnected. You might get disconnected if you are on VPN.
-
-1.  "screen -S my_fancy_rcode_session"
-    1. "screen" opens a session
-    1. " -S " gives the session a name.
-    1. "my_fancy_rcode_session" is the name of the session. Since you can have multiple screens, it helps to give a descriptive name. Perhaps the name of the script that you are going to run. 
-  
-The PuTTY window might flash and you will end up at a screen that looks like this: 
-
-![Login Screen](/images/screen1.jpg)
-
-# Part 5 -  Run your code
-Run your code with Rscript. 
-
-```
-Rscript /path/to/my_fancy_rcode.R ; mailme First.Last@noaa.gov "my_fancy_rcode complete"
-```
-
-The first part runs the R script file called "my_fancy_rcode.R" that is stored in the directory that you are in.
-
-The mailme command will send you an email to "First.Last@noaa.gov" with the message "my_fancy_rcode complete" . This is optional.  It is particularly useful if your code takes a long time to run: you'll get a message that it's done. Not all of the servers have this functionality.
-
-littler is another modern way to run R from the terminal. R CMD BATCH and R are older methods that you might see on the internet.  They are probably not as good.
-
-# Part 6 - Check and Detach
-
-Make sure your code has started to run:
-![It's working](/images/r_running.jpg)
-
-And then you can detatch with Ctrl a d.  (**Hold Ctrl then press a, then press d**).  You can open up another session, by doing steps 4-6 again.  But don't be a jerk an use up all the processing power.
-
-
-# Part 7 - Results  and Cleanup.
-If your code ran properly, you'll get an email that says "my_fancy_rcode complete".
-1. Open the session back up with
-screen -r "my_fancy_rcode"
-
-and take a look for any error messages.  If there are none, you can just type "exit" to terminate the screen.  Then you can log out of putty with another "exit"
-
-
-# Part 8 - Tips for Screen
-1. List all your screen screen -ls 
-1. Shut down a screen  "screen -XS my_fancy_rcode_session quit"
-1. Reconnect "screen -r my_fancy_rcode_session
-1. Create "screen -S my_fancy_rcode_session"
-
-
-# Part 9 - Other tips
-
-## Installing pacakges
-
-All feature or package installations for R need to go through our ticketing system and must be approved via CCB. 
-
-This process helps us track packages and ensure security compliance in a unified area. When end users install packages they can be duplicating efforts and causing bloat on our infrastructure. We ask that you please submit your ticket using the following guidelines:
-
-1.   Please be sure to verify they are not already installed. (this has been occuring often)
-2.    Please also format your requests for packages as follows:
-```
-install.packages(c('package name', 'package name'))
-```
-
-
-
-
-## What Linux Servers
-
-[Learn about the NEFSC Linux servers](https://www.st.nmfs.noaa.gov/confluence/display/NECIT/Linux+Servers+at+the+NEFSC) . Use your email prefix and password to log in.
-
-## What else is running?
-To see what else is running, use the unix command ``top``:
-![top](/images/top.png)
-
-Total CPU usage is in Green (0.2%, so not much is going on right now.)
-The user name,  CPU, and Memory usage is circled in Red. The CPU column is based on a single computer instance, so don't be surprised if it shows something like 395%.
-
-Want to see just your own processes? Use ``top -u <yourid>``
+# Part 2 - Other tips
 
 
 ## One of your processes is frozen? 
@@ -167,6 +60,99 @@ Another way to do this is to add the following line of code to your R code:
 ```
 system("mailme First.Last@noaa.gov \"my_fancy_rcode.R complete\" ")
 ```
+
+
+
+# Archive
+The mars, neptune, and shiny1 servers were shut down. This is mostly no longer relevant.
+
+
+## Running R on one of the network servers using putty!
+
+Many of the [NEFSC servers](https://localonly.nefsc.noaa.gov/linux/Servers) have Rstudio that is accessible by browser. Sometimes, you will want to run R  directly. This will help you do that.
+
+This is adapted from Liz Brooks's powerpoint documentation, in which she has collected wisdom from David Hiltz
+
+Please help make this a valuable up-to-date resource.  To add your knowledge:
+1.   [Fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo) - It's in the top right of github.
+1.   Make your changes  - click the file you want to edit and then the little pencil on the right side.  ![Here's a picture](/images/fork_edit.jpg)
+1.   [Pull Request](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request-from-a-fork) so the changes get into the document.
+
+
+## Part 1 - Download and Install Putty
+You need to have a way to connect to the NEFSC servers. For windows users, PuTTY is a good choice.  [Here's your download link](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html).  Chances are you want the 64 bit windows installer. 
+
+## Part 2 - Optional WinSCP
+While you are installing things, you might want to get [WinSCP](https://winscp.net/eng/download.php). This lets you transfer files to a server easily. Of course, you can use the file manager built into windows or do it from the command line. 
+
+## Part 3 - Connect to the One of the Unix Servers, log in, and go to your working directory.
+
+1. Get onto the NEFSC network, either by VPN or by going to the office.
+1. Launch PuTTY
+1. Type in the host name of the server (blue).  
+    1.  We can't put these details on github, so contact  [ITD](https://apps-st.fisheries.noaa.gov/jirasm/servicedesk/customer/portal/2) if you don't know them.
+    1.  If you're going to do this more than 1 or two times, save connection details (purple) 
+1. Click "Open" (green)
+
+![Putty Launch](/images/putty_pic.jpg)
+
+
+You will be greeted with a bland looking login screen.
+
+![Login Screen](/images/login_screen.png)
+
+1. Use your network login (not your email)
+1. When you type your password, no characters will show up.
+1. "cd" into directory where you have an R script that you want to run (for me that is Git/IBMWG) 
+
+## Part 4 - Use Screen
+
+Using screen is important. It allows you to run a process in the background that will continue even if you  get disconnected. You might get disconnected if you are on VPN.
+
+1.  "screen -S my_fancy_rcode_session"
+    1. "screen" opens a session
+    1. " -S " gives the session a name.
+    1. "my_fancy_rcode_session" is the name of the session. Since you can have multiple screens, it helps to give a descriptive name. Perhaps the name of the script that you are going to run. 
+  
+The PuTTY window might flash and you will end up at a screen that looks like this: 
+
+![Login Screen](/images/screen1.jpg)
+
+## Part 5 -  Run your code
+Run your code with Rscript. 
+
+```
+Rscript /path/to/my_fancy_rcode.R ; mailme First.Last@noaa.gov "my_fancy_rcode complete"
+```
+
+The first part runs the R script file called "my_fancy_rcode.R" that is stored in the directory that you are in.
+
+The mailme command will send you an email to "First.Last@noaa.gov" with the message "my_fancy_rcode complete" . This is optional.  It is particularly useful if your code takes a long time to run: you'll get a message that it's done. Not all of the servers have this functionality.
+
+littler is another modern way to run R from the terminal. R CMD BATCH and R are older methods that you might see on the internet.  They are probably not as good.
+
+## Part 6 - Check and Detach
+
+Make sure your code has started to run:
+![It's working](/images/r_running.jpg)
+
+And then you can detatch with Ctrl a d.  (**Hold Ctrl then press a, then press d**).  You can open up another session, by doing steps 4-6 again.  But don't be a jerk an use up all the processing power.
+
+
+## Part 7 - Results  and Cleanup.
+If your code ran properly, you'll get an email that says "my_fancy_rcode complete".
+1. Open the session back up with
+screen -r "my_fancy_rcode"
+
+and take a look for any error messages.  If there are none, you can just type "exit" to terminate the screen.  Then you can log out of putty with another "exit"
+
+
+## Part 8 - Tips for Screen
+1. List all your screen screen -ls 
+1. Shut down a screen  "screen -XS my_fancy_rcode_session quit"
+1. Reconnect "screen -r my_fancy_rcode_session
+1. Create "screen -S my_fancy_rcode_session"
+
 
     
 # Stuff
