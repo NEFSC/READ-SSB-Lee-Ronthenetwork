@@ -2,7 +2,7 @@
 
 NEFSC has moved to a container setup.  Open a ticket using the helpdesk and IT will setup a container. 
 1. Containers sometimes need to be restarted or updated. The files in the root directory will not persist, so save your results somewhere else
-2. Startup scripts can be handled. Put your [.Rprofile](https://github.com/NEFSC/READ-SSB-Lee-project-template/blob/main/R_code/project_logistics/.Rprofile_sample) into your root directory on ``NEFSCFILE.``  It will be copied into the root of your container every time the container is re-started or reconfigured.  Be mindful of the leading period in ``.Rprofile''.
+2. Persistent startup scripts can be handled on request. Put your [.Rprofile](https://github.com/NEFSC/READ-SSB-Lee-project-template/blob/main/R_code/project_logistics/.Rprofile_sample) into your root directory on ``NEFSCFILE.``  Ask to have it copied into the root of your container every time the container is re-started or reconfigured.  Be mindful of the leading period in ``.Rprofile''.
 3. You will have access to an Rstudio development environment. If you so desire, you can execute scripts or unix commands from the ``Terminal`` tab. 
 
 
@@ -50,17 +50,6 @@ You might want to move files around on the network.  SCP from the command line m
 scp /full/path/of/files/to/move server:/full/path/of/destination
 ```
 this might useful to put something onto the ftp server or put it into someone else's network folder.
-
-## Send yourself an email
-
-There are two ways to do this. One is in the section above on ``screen.``
-
-Another way to do this is to add the following line of code to your R code:
-
-```
-system("mailme First.Last@noaa.gov \"my_fancy_rcode.R complete\" ")
-```
-
 
 
 # Archive
