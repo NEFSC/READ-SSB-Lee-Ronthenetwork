@@ -8,6 +8,9 @@ NEFSC has moved to a container setup.  Open a ticket using the helpdesk and IT w
 
 # Part 2 - Other tips
 
+## Terminal (Command line) access
+
+You have access to a unix terminal from inside Rstudio. Use the "Terminal" tab (next to console).
 
 ## One of your processes is frozen? 
 
