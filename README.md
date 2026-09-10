@@ -5,8 +5,24 @@ NEFSC has moved to a container setup.  Open a ticket using the helpdesk and IT w
 2. Persistent startup scripts can be handled on request. Put your [.Rprofile](https://github.com/NEFSC/READ-SSB-Lee-project-template/blob/main/R_code/project_logistics/.Rprofile_sample) into your root directory on ``NEFSCFILE.``  Ask to have it copied into the root of your container every time the container is re-started or reconfigured.  Be mindful of the leading period in ``.Rprofile''.
 3. You will have access to an Rstudio development environment. If you so desire, you can execute scripts or unix commands from the ``Terminal`` tab. 
 
+# Part 2 - Rendering Rmarkdown
 
-# Part 2 - Other tips
+You might have trouble rendering Rmarkdown files to .pdf on the network due to missing LaTeX packages:
+```
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex)
+restricted \write18 enabled.
+entering extended mode! LaTeX Error: File `endnotes.sty' not found.
+```
+
+The solution is to do this in Terminal:  
+```
+tlmgr init-usertree
+tlmgr --usermode install endnotes
+```
+
+Unfortunately, you can't automatically install LaTeX when needed, so you'll have to install by hand other packages that you need, which might include things like tabularx, and subfigure. Generally the missing file is the name of the latex package.   
+
+# Part 3 - Other tips
 
 ## Terminal (Command line) access
 
