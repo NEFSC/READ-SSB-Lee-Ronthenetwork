@@ -20,7 +20,7 @@ tlmgr init-usertree
 tlmgr --usermode install endnotes
 ```
 
-Unfortunately, you can't automatically install LaTeX when needed, so you'll have to install by hand other packages that you need, which might include things like tabularx, and subfigure. Generally the missing file is the name of the latex package.   
+Unfortunately, you can't automatically install LaTeX when needed, so you'll have to install by hand other packages that you need, which might include things like tabularx, algorithms,  and subfigure. Generally the missing file is the name of the latex package.   
 
 # Part 3 - Other tips
 
