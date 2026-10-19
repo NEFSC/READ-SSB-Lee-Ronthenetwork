@@ -5,6 +5,8 @@ NEFSC has moved to a container setup.  Open a ticket using the helpdesk and IT w
 2. Persistent startup scripts can be handled on request. Put your [.Rprofile](https://github.com/NEFSC/READ-SSB-Lee-project-template/blob/main/R_code/project_logistics/.Rprofile_sample) into your root directory on ``NEFSCFILE.``  Ask to have it copied into the root of your container every time the container is re-started or reconfigured.  Be mindful of the leading period in ``.Rprofile''.
 3. You will have access to an Rstudio development environment. If you so desire, you can execute scripts or unix commands from the ``Terminal`` tab. 
 
+NEFSC will move all computing to the cloud in late 2026.  As of October, you can access your cloud resources, including Rstudio through the [cloud portal](https://gcptest.nefsc.info/).
+
 # Part 2 - Rendering Rmarkdown
 
 You might have trouble rendering Rmarkdown files to .pdf on the network due to missing LaTeX packages:
